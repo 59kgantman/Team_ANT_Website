@@ -15,7 +15,6 @@ html > body {
   top: 0;
   left: 0;
   width: 100%;
-  border: 2px solid red;
 }
 .top-bar .logo {
   display: inline-block;
@@ -31,4 +30,26 @@ html > body {
   padding-inline: 3.5%;
   width: 100%;
   display: flex;
+}
+
+.top-bar__menu-1 .menu-item {
+  padding-inline: 20px;
+}
+.top-bar__menu-1 .menu-item.menu-hover > a, .top-bar__menu-1 .menu-item:hover:not(:last-child) > a, .top-bar__menu-1 .menu-item:hover > a::after {
+  color: #fff;
+  opacity: 0.5;
+}
+.top-bar__menu-1 .menu-item:last-child > a::after {
+  content: "*";
+  font-family: "fontAwesome";
+  margin-left: 8px;
+  transition: color 0.3s, opacity 0.3s;
+}
+.top-bar__menu-1 .menu-item-text {
+  color: #999;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 20px 5px;
+  transition: color 0.3s, opacity 0.3s;
 }
