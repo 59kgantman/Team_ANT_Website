@@ -23,6 +23,7 @@
 
   <body>
     <div class="site-wrap">
+      <!-- ★ Header: 로고 + 메뉴 -->
       <header class="top-bar">
         <div class="top-bar__inner">
           <div class="logo-box flex items-center">
@@ -36,31 +37,23 @@
               <li class="menu-item menu-hover">
                 <a href="#" class="menu-item-text">About Us</a>
               </li>
-
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Service</a>
               </li>
-
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Price</a>
               </li>
-
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Gym</a>
               </li>
-
               <li class="menu-item">
                 <a href="#" class="menu-item-text">In Media</a>
               </li>
-
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Contact</a>
               </li>
-
-              <!-- ★★ 여기 수정됨 ★★ -->
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Kor</a>
-
                 <div class="sub-menu-box">
                   <ul class="sub-menu">
                     <li class="sub-menu-list">
@@ -73,6 +66,22 @@
           </nav>
         </div>
       </header>
+
+      <!-- ★ Main content: 비디오 배너 -->
+      <main class="content-wrap">
+        <section class="main-video-banner">
+          <div class="video-banner__inner">
+            <video
+              src="./videos/메인비디오.mp4"
+              class="main-video"
+              muted
+              autoplay
+              loop
+              playsinline
+            ></video>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
