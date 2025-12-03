@@ -98,3 +98,56 @@ html > body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.elementor-section {
+  background-color: #000;
+  padding-block: 200px;
+}
+.elementor-section .elementor-section-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.section-1__head .head-sub-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #b9b9b9;
+}
+.section-1__head .head-main-title {
+  font-size: 111px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.section-1__body {
+  margin-top: 100px;
+}
+.section-1__body .des-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #9c9c9c;
+}
+
+.section-1__right-content {
+  position: relative;
+}
+.section-1__right-content .btn-link {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+}
+.section-1__right-content .btn-link a {
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+.section-1__right-content .btn-link a::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: #fff;
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translateY(-50%);
+}
