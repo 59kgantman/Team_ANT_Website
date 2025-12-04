@@ -14,9 +14,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
 
-    <!-- 공통 js 연결-->
-    <script src="./script/script.js"></script>
-
     <!-- 공통 css 연결-->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -28,14 +25,24 @@
         <div class="top-bar__inner">
           <div class="logo-box flex items-center">
             <a href="#" class="logo">
-              <img src="./images/long logo.png" alt="glow seoul logo" />
+              <img
+                src="./images/long logo.png"
+                alt="glow seoul logo"
+                class="logo-pc"
+              />
+              <img
+                src="./images/심볼만.png"
+                alt="glow seoul logo mobile"
+                class="logo-mobile"
+              />
             </a>
           </div>
 
-          <nav class="top-bar__menu-1 ml-auto">
+          <!-- 🔵 기존 메뉴 (PC 전용) -->
+          <nav class="top-bar__menu-1 ml-auto hidden md:block">
             <ul class="menu flex">
               <li class="menu-item menu-hover">
-                <a href="#" class="menu-item-text">About Us</a>
+                <a href="#" class="menu-item-text">About</a>
               </li>
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Service</a>
@@ -47,7 +54,7 @@
                 <a href="#" class="menu-item-text">Gym</a>
               </li>
               <li class="menu-item">
-                <a href="#" class="menu-item-text">In Media</a>
+                <a href="#" class="menu-item-text">Media</a>
               </li>
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Contact</a>
@@ -64,15 +71,34 @@
               </li>
             </ul>
           </nav>
+
+          <!-- 🔵 햄버거 (모바일 전용) -->
+          <button class="hamburger md:hidden" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </header>
+
+      <!-- 🔵 GlowSeoul 스타일 모바일 전체 메뉴 -->
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Price</a></li>
+          <li><a href="#">Gym</a></li>
+          <li><a href="#">In Media</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
 
       <!-- ★ Main content: 비디오 배너 -->
       <main class="content-wrap">
         <section class="main-video-banner">
           <div class="video-banner__inner">
             <video
-              src="./videos/메인비디오.mp4"
+              src="./videos/메인페이지비디오.mp4"
               class="main-video"
               muted
               autoplay
@@ -86,7 +112,7 @@
           <div class="elementor-section-container section-1__container flex">
             <div class="section-1__left-content">
               <div class="section-1__head">
-                <h3 class="head-sub-title">당신의 모든 상상은 현실이 됩니다</h3>
+                <h3 class="head-sub-title">Trust the Taper, Trust the Team</h3>
                 <h2 class="head-main-title">Team ANT</h2>
               </div>
 
@@ -111,4 +137,6 @@
       </main>
     </div>
   </body>
+  <!-- 공통 js 연결-->
+  <script src="./script/script.js"></script>
 </html>

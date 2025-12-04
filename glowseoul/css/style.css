@@ -15,22 +15,51 @@ html > body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 20000;
 }
 .top-bar .logo {
   display: inline-block;
 }
-.top-bar .logo img {
-  width: 40%;
-  height: 40%;
-  max-height: 40%;
+.top-bar img {
+  width: 30%;
+  height: 30%;
+  max-height: 20%;
 }
 
+/* ▶ PC 기본: 모바일 로고 숨김 */
+.logo-mobile {
+  display: none !important;
+}
+
+.logo-pc {
+  display: block !important;
+}
+
+/* ▶ 모바일 화면에서 로고 스위칭 */
+@media (max-width: 768px) {
+  /* PC 로고 숨기기 */
+  .logo-pc {
+    display: none !important;
+  }
+  /* 모바일 로고 표시 */
+  .logo-mobile {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-top: 0;
+  }
+  /* logo 내부 다른 이미지 스타일 안정화 */
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+}
 .top-bar__inner {
   padding-top: 40px;
   padding-inline: 3.5%;
-  width: 100%;
+  width: auto;
   display: flex;
+  justify-content: space-between;
 }
 
 .top-bar__menu-1 .menu-item {
@@ -89,6 +118,75 @@ html > body {
   font-weight: bold;
 }
 
+/* =============================
+   🔵 GlowSeoul 스타일 모바일 메뉴
+   Fade-in + Slide-down 애니메이션
+============================= */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+  z-index: 500;
+}
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 메뉴 전체 블록 */
+.mobile-menu-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  /* ↓ 등장 애니메이션 초기 상태 */
+  transform: translateY(-40px);
+  opacity: 0;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.55s ease;
+  /* active일 때 자연스럽게 내려옴 */
+}
+.active .mobile-menu-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 닫기 버튼 (X) */
+.mobile-close-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.mobile-close-btn:hover {
+  opacity: 0.6;
+}
+
+/* 메뉴 리스트 */
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+}
+.mobile-menu-list li {
+  margin: 22px 0;
+}
+.mobile-menu-list li a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+.mobile-menu-list li a:hover {
+  opacity: 0.6;
+}
+
 .video-banner__inner {
   aspect-ratio: 2.33333;
 }
@@ -97,13 +195,16 @@ html > body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center 0px;
+     object-position: center 0px;
 }
 
 .elementor-section {
   background-color: #000;
-  padding-block: 200px;
+  padding-block: clamp(40px, 4vw, 75px);
 }
 .elementor-section .elementor-section-container {
+  padding-left: 1rem;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -120,7 +221,7 @@ html > body {
 }
 
 .section-1__body {
-  margin-top: 100px;
+  margin-top: 25px;
 }
 .section-1__body .des-text {
   font-size: 20px;
@@ -150,4 +251,104 @@ html > body {
   top: 50%;
   left: calc(100% + 10px);
   transform: translateY(-50%);
+}
+
+/* -------------------------
+   햄버거 메뉴
+---------------------------- */
+.hamburger {
+  flex: 0 0 auto;
+  width: 32px !important;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 9999;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.hamburger span {
+  width: 32px;
+  display: block;
+  height: 3px;
+  background: #000;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+/* -------------------------
+   모바일 메뉴
+---------------------------- */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  padding-top: 120px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease-out;
+  z-index: 9990;
+  text-align: center;
+  /* 순차 애니메이션 (GlowSeoul 느낌) */
+}
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+.mobile-nav ul li {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.4s ease-out;
+}
+.mobile-nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.mobile-nav.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+.mobile-nav.open ul li {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-nav.open ul li:nth-child(1) {
+  transition-delay: 0.15s;
+}
+.mobile-nav.open ul li:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.mobile-nav.open ul li:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.mobile-nav.open ul li:nth-child(4) {
+  transition-delay: 0.45s;
+}
+.mobile-nav.open ul li:nth-child(5) {
+  transition-delay: 0.55s;
+}
+.mobile-nav.open ul li:nth-child(6) {
+  transition-delay: 0.65s;
 }
