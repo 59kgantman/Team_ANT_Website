@@ -51,7 +51,10 @@ html > body {
 }
 
 .logo-pc {
+  margin-top: -20px;
+  margin-left: clamp(00px, 3%, 0px);
   display: block !important; // 기본: PC 이미지는 표시
+  min-width: 100px;
 }
 
 /* ▶ 모바일 화면에서 로고 스위칭 */
@@ -824,8 +827,9 @@ $video-aspect-ratio: 2.33333;
   }
 
   .footer-logo {
-    width: 100px;
-    margin-bottom: 15px;
+    width: 150px;
+    margin-top: -30px;
+    margin-bottom: 0px;
   }
 
   .footer-description {
