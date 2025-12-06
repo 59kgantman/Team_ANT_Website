@@ -77,6 +77,11 @@ html > body {
   justify-content: space-between;
 }
 
+.top-bar__menu-1 .menu {
+  /* ===========================
+     TOP BAR - GLOW EFFECT
+  =========================== */
+}
 .top-bar__menu-1 .menu-item {
   padding-inline: 20px;
 }
@@ -108,6 +113,14 @@ html > body {
   font-size: 1rem;
   padding: 20px 5px;
   transition: color 0.3s, opacity 0.3s;
+}
+.top-bar__menu-1 .menu .top-bar__menu a {
+  transition: all 0.25s ease;
+}
+.top-bar__menu-1 .menu .top-bar__menu a:hover,
+.top-bar__menu-1 .menu .top-bar__menu a.active {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6);
 }
 .top-bar__menu-1 .sub-menu-box {
   position: absolute;
@@ -279,6 +292,7 @@ html > body {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-block: clamp(80px, 6vw, 140px);
+  padding-bottom: 100px;
   /* 모바일 (max-width: 768px 이하) */
 }
 .section-2 .section-2__container {
@@ -488,6 +502,9 @@ html > body {
 /* =========================================================
    🔵 Section 2 타이틀 — Section 1과 동일한 스타일 적용
 ========================================================= */
+.section-2 {
+  padding-top: 150px;
+}
 .section-2 .section-2__sub-title {
   font-size: 26px;
   font-weight: bold;
@@ -564,7 +581,7 @@ html > body {
 ----------------------------------- */
 .section-3 {
   width: 100%;
-  padding: 150px 0;
+  padding: 100px 0;
   background-color: #0d0d0d;
   /* 메인 강조 카드 색상 */
 }
@@ -574,11 +591,22 @@ html > body {
   margin: 0 auto;
 }
 .section-3 .section-3__title {
-  font-size: 42px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 60px;
+  font-size: 75px;
+  font-weight: 800;
   text-align: center;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  position: relative;
+  color: #fff;
+}
+.section-3 .section-3-line {
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  margin: 15px auto 0;
+  animation: expandLine 1.2s ease-out forwards;
+  animation-delay: 0.4s;
 }
 .section-3 .section-3__cards {
   display: flex;
@@ -598,12 +626,11 @@ html > body {
 .section-3 .card:hover {
   transform: translateY(-8px);
 }
-.section-3 .card .card__icon {
-  margin-bottom: 25px;
-}
-.section-3 .card .card__icon img {
-  width: 70px;
-  opacity: 0.9;
+.section-3 .card .card__icon-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
 }
 .section-3 .card .card__price {
   font-size: 38px;
@@ -669,11 +696,125 @@ html > body {
     transition-delay: 0s !important;
   }
   .section-3 .section-3__title {
-    font-size: 32px;
+    font-size: 55px;
+  }
+  .section-3 .section-3-line {
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    margin: 15px auto 0;
+    animation: expandLine 1.2s ease-out forwards;
+    animation-delay: 0.4s;
   }
   .section-3 .card {
     width: 100%;
     max-width: 350px;
+  }
+}
+@media (max-width: 768px) {
+  .section-3 {
+    padding: 20px 0 20px;
+  }
+}
+/* =============================
+   SECTION 4 — 리뷰 섹션
+============================= */
+.section-4 {
+  width: 100%;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 120px 20px;
+  /* 리뷰 슬라이더 */
+}
+.section-4 .section-4__inner {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+.section-4 .section-4-title {
+  position: relative;
+  font-size: 75px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 60px;
+  text-align: center;
+  /* 중앙 → 양옆 확장 라인 */
+}
+.section-4 .section-4-title span {
+  display: block;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 15px;
+  color: #999;
+}
+.section-4 .section-4-title .section-4-line {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  animation: expandLine 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 400px;
+  }
+}
+.section-4 .review-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.section-4 .review-track {
+  overflow: visible;
+  display: flex;
+  gap: 40px;
+  animation: slide-left 15s linear infinite;
+}
+.section-4 .review-track img {
+  height: 380px; /* 🔥 이미지 기본 크기 크게 */
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.section-4 .review-track img:hover {
+  transform: scale(1.12); /* 확대 */
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.5), 0 0 70px rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 768px) {
+  .section-4 .review-track img {
+    height: 350px; /* 모바일에서 이미지 크기 조정 */
+  }
+}
+
+/* 🔄 오른쪽 → 왼쪽 반복 */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 768px) {
+  .review-slider,
+  .review-track {
+    overflow: visible !important;
+  }
+  .section-4 .review-track img {
+    transform-origin: center center; /* 확대 기준 중앙 */
   }
 }
 /* ----------------------------------------
@@ -703,6 +844,13 @@ html > body {
   width: 150px;
   margin-top: -30px;
   margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+  .site-footer .footer-logo {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .site-footer .footer-description {
   font-size: 8px;
@@ -750,4 +898,13 @@ html > body {
   width: 28px;
   height: 28px;
   display: block;
+}
+
+/* ===========================
+   ACTIVE MENU GLOW EFFECT
+=========================== */
+.menu-item-text.active {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 31, 107, 0.7), 0 0 20px rgba(255, 31, 107, 0.5);
+  font-weight: 700;
 }

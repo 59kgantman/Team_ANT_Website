@@ -32,3 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+
+// ★ 현재 URL과 메뉴 링크 href 비교 → active 자동 적용
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = location.pathname.split("/").pop(); // ex) "price.html"
+  const menuLinks = document.querySelectorAll(".menu-item-text a");
+
+  menuLinks.forEach((link) => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});
