@@ -45,11 +45,11 @@
   border-radius: 24px;
   text-align: center;
   transition: all 0.25s ease;
-  box-shadow: 0 0 20px rgba(255, 0, 85, 0.15);
+  box-shadow: 0 0 20px rgba(237, 237, 237, 0.25);
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 30px rgba(255, 0, 85, 0.35);
+    box-shadow: 0 0 30px rgba(237, 237, 237, 0.75);
   }
 }
 

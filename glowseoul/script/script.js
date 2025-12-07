@@ -1,6 +1,9 @@
 console.log("Hello");
 
 document.addEventListener("DOMContentLoaded", () => {
+  /* =======================
+     📌 1. 햄버거 메뉴
+  ======================= */
   const hamburger = document.querySelector(".hamburger");
   const mobileNav = document.querySelector(".mobile-nav");
 
@@ -11,7 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 🔵 fade-up 애니메이션 (section-1, section-2 전부)
+  /* =======================
+     📌 2. fade-up 애니메이션
+  ======================= */
   const fadeElements = document.querySelectorAll(".fade-up, .fade-up-btn");
 
   const observer = new IntersectionObserver(
@@ -22,27 +27,60 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    {
-      threshold: 0.15, // 보이는 정도
-    }
+    { threshold: 0.15 }
   );
 
   fadeElements.forEach((el, index) => {
-    el.style.transitionDelay = `${index * 0.15}s`; // 순차 애니메이션
+    el.style.transitionDelay = `${index * 0.15}s`;
     observer.observe(el);
   });
-});
 
-// ★ 현재 URL과 메뉴 링크 href 비교 → active 자동 적용
-document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = location.pathname.split("/").pop(); // ex) "price.html"
+  /* =======================
+     📌 3. 메뉴 active 자동 적용
+  ======================= */
+  const currentPage = location.pathname.split("/").pop(); // ex: "price.html"
   const menuLinks = document.querySelectorAll(".menu-item-text a");
 
   menuLinks.forEach((link) => {
-    const linkPage = link.getAttribute("href");
-
-    if (linkPage === currentPage) {
+    if (link.getAttribute("href") === currentPage) {
       link.classList.add("active");
     }
+  });
+});
+
+/* =======================
+   📌 Fade-Up Scroll Animation
+======================= */
+const fadeEls = document.querySelectorAll(".fade-up");
+
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+fadeEls.forEach((el) => fadeObserver.observe(el));
+
+// FAQ 선택 기능
+document.querySelectorAll(".faq-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    document
+      .querySelectorAll(".faq-item")
+      .forEach((i) => i.classList.remove("active"));
+
+    item.classList.add("active");
+
+    const target = item.dataset.answer;
+
+    document.querySelectorAll(".faq-answer").forEach((a) => {
+      a.classList.remove("show");
+    });
+
+    document.getElementById(target).classList.add("show");
   });
 });

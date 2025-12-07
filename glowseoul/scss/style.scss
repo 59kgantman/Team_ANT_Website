@@ -907,7 +907,7 @@ $video-aspect-ratio: 2.33333;
   /* 리뷰 슬라이더 */
   .review-slider {
     width: 100%;
-    overflow: hidden;
+    overflow: visible !important;
     position: relative;
   }
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Glow Seoul</title>
+    <title>Contact | Glow Seoul</title>
 
     <!-- Tailwind -->
     <script defer src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -16,10 +16,10 @@
 
     <!-- 공통 CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/faq.css" />
   </head>
 
-  <body class="about-page bg-black text-white">
+  <body class="bg-black text-white">
     <div class="site-wrap">
       <!-- ★ Header (공통) -->
       <header class="top-bar">
@@ -28,7 +28,6 @@
             <a href="index.html" class="logo">
               <img
                 src="./images/팀앤트 로고 색반전(그림자).png"
-                alt="glow seoul logo"
                 class="logo-pc"
               />
               <img
@@ -41,8 +40,8 @@
 
           <nav class="top-bar__menu-1 ml-auto hidden md:block">
             <ul class="menu flex">
-              <li class="menu-item menu-hover">
-                <a href="./about.html" class="menu-item-text active">About</a>
+              <li class="menu-item">
+                <a href="./about.html" class="menu-item-text">About</a>
               </li>
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Service</a>
@@ -59,18 +58,13 @@
                 >
               </li>
               <li class="menu-item">
-                <a href="./faq.html" class="menu-item-text">FAQ</a>
+                <a href="./faq.html" class="menu-item-text active">FAQ</a>
               </li>
               <li class="menu-item">
                 <a href="./contact.html" class="menu-item-text">Contact</a>
               </li>
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Kor</a>
-                <div class="sub-menu-box">
-                  <ul class="sub-menu">
-                    <li><a href="#" class="sub-menu-text">Eng</a></li>
-                  </ul>
-                </div>
               </li>
             </ul>
           </nav>
@@ -85,8 +79,8 @@
       <nav class="mobile-nav">
         <ul>
           <li><a href="./about.html">About</a></li>
-          <li><a href="#">Service</a></li>
           <li><a href="./price.html">Price</a></li>
+          <li><a href="#">Service</a></li>
           <li>
             <a href="https://map.naver.com/p/entry/place/1109130661">Gym</a>
           </li>
@@ -95,75 +89,78 @@
         </ul>
       </nav>
 
-      <!-- ★ About Hero Section -->
-      <section class="about-hero">
-        <video class="about-hero-video" autoplay muted loop playsinline>
-          <source src="./videos/메인페이지비디오.mp4" type="video/mp4" />
-        </video>
+      <!-- ★ Hero Section : Glow Seoul Style -->
+      <section class="faq-hero">
+        <div class="hero-inner fade-up">
+          <h1 class="faq-title">FAQ</h1>
+          <p class="faq-subtext">자주 묻는 질문들</p>
 
-        <!-- 🟡 비디오 위 텍스트 -->
-        <div class="about-hero-text fade-up">
-          <h1>ABOUT</h1>
-          <p>소개합니다</p>
+          <!-- 히어로 언더라인 -->
           <div class="hero-underline"></div>
         </div>
       </section>
+    </div>
 
-      <!-- ★ About Content Section -->
-      <section class="about-content max-w-5xl mx-auto px-6 py-20">
-        <div class="grid md:grid-cols-2 gap-12 items-center fade-up">
-          <div>
-            <h2 class="text-4xl font-bold mb-6">59kg앤트맨 정지훈 ㅣ Career</h2>
+<!-- ★ FAQ Section -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <!-- 왼쪽 질문 리스트 -->
+    <div class="faq-questions fade-up delay-0">
+      <ul>
+        <li class="faq-item active" data-answer="answer1">온라인 코칭은 어떻게 진행되나요?</li>
+        <li class="faq-item" data-answer="answer2">오프라인 PT는 어떤 방식인가요?</li>
+        <li class="faq-item" data-answer="answer3">식단 관리는 포함인가요?</li>
+        <li class="faq-item" data-answer="answer4">환불 정책은 어떻게 되나요?</li>
+        <li class="faq-item" data-answer="answer5">운동 초보도 신청 가능한가요?</li>
+      </ul>
+    </div>
 
-            <ul class="career-list">
-              <li>
-                한국인 최초 파워리프팅 국제시합 전종목 금메달 (스쿼트,
-                벤치프레스, 데드리프트, 종합기록)
-              </li>
-              <li>아시아 스쿼트 신기록 갱신 (2022 / 59kg 체급)</li>
-              <li>
-                2024 IPF Worlds Open -59kg 체급 Top 6, 한국인 최초 세계대회 종목
-                입상 (스쿼트 3위)
-              </li>
-              <li>
-                2022 Asian Classic Powerlifting Championship -59kg 체급 1위
-              </li>
-              <li>2022 IPF Dubai Asia Qualifier -59kg 체급 1위</li>
-              <li>2022 IPF Busan Powerlifting Championship -59kg 체급 1위</li>
-              <li>2022 Korea Powerlifting Championship -59kg 체급 1위</li>
-              <div class="career-spacer"></div>
-              <li>파워리프팅 유튜브 ‘59kg앤트맨’ 채널 운영</li>
-              <li>SBS 세상에 이런일이 1216회 출연</li>
-              <li>SBD Korea 공식 지원선수</li>
-              <li>Team Ant Powerlifting 설립 및 운영</li>
-            </ul>
-          </div>
-          <div class>
-            <img
-              src="./images/IPF Worlds 2024 (16 of 50).jpg"
-              alt="glowseoul"
-              class="rounded-2xl shadow-lg"
-            />
-          </div>
-        </div>
+    <!-- 오른쪽 답변 영역 -->
+    <div class="faq-answer-box fade-up  delay-1">
+      <div id="answer1" class="faq-answer show">
+        <h3>온라인 코칭 진행 방식</h3>
+        <p>
+          회원님의 목표와 현재 상태를 기반으로 맞춤형 프로그램을 설계하며, 
+          주 1~2회 피드백과 영상 교정이 함께 제공됩니다.
+        </p>
+      </div>
 
-        <div class="mt-20 grid md:grid-cols-2 gap-12 items-center fade-up">
-          <div class="order-2 md:order-1">
-            <img
-              src="./images/about_sample2.jpg"
-              alt="about gym"
-              class="rounded-2xl shadow-lg"
-            />
-          </div>
-          <div class="order-1 md:order-2">
-            <h2 class="text-4xl font-bold mb-6">우리는 이렇게 훈련합니다</h2>
-            <p class="text-gray-300 leading-relaxed">
-              체계적인 프로그램과 개인 맞춤 코칭을 기반으로<br />
-              누구나 안전하고 꾸준하게 성장하도록 돕습니다.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div id="answer2" class="faq-answer">
+        <h3>오프라인 PT 방식</h3>
+        <p>
+          일산 본점에서 1:1 개인 지도로 진행되며, 운동 목적과 레벨에 맞춰 
+          세부 커리큘럼으로 진행합니다.
+        </p>
+      </div>
+
+      <div id="answer3" class="faq-answer">
+        <h3>식단 관리 포함 여부</h3>
+        <p>
+          모든 프로그램에는 기본적인 식단 가이드가 포함되며, 필요 시 
+          추가적인 관리 옵션도 제공됩니다.
+        </p>
+      </div>
+
+      <div id="answer4" class="faq-answer">
+        <h3>환불 정책 안내</h3>
+        <p>
+          환불 기준은 이용 기간과 잔여 횟수에 따라 차등 적용되며, 
+          자세한 내용은 문의 시 안내해드립니다.
+        </p>
+      </div>
+
+      <div id="answer5" class="faq-answer">
+        <h3>운동 초보 신청 가능 여부</h3>
+        <p>
+          네, 완전 초보도 충분히 가능합니다.  
+          모든 회원 분들은 처음엔 초보였고, 기초부터 차근차근 지도합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <!-- ★ Footer (공통) -->
       <footer class="site-footer">
@@ -171,12 +168,7 @@
           <div class="footer-left">
             <img src="./images/팀앤트 로고 색반전.png" class="footer-logo" />
             <div class="footer-sns">
-              <a
-                href="https://naver.me/GipdUq2N"
-                class="sns-item naver-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://naver.me/GipdUq2N" class="sns-item naver-icon" target="_blank" rel="noopener noreferrer">
                 <svg width="26" height="26" viewBox="0 0 24 24">
                   <rect width="24" height="24" rx="4" fill="#03C75A"></rect>
                   <path
@@ -228,5 +220,7 @@
     </div>
 
     <script src="./script/script.js"></script>
+
+
   </body>
 </html>

@@ -1,0 +1,181 @@
+/* ============================
+   CONTACT PAGE — Glow Seoul
+============================ */
+
+/* 공통 */
+.contact-page {
+  background: #000;
+  color: #fff;
+}
+
+/* ============================
+   CONTACT HERO SECTION FIX
+============================ */
+.contact-hero {
+  width: 100%;
+  padding: 300px 0 100px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
+}
+
+.contact-title {
+  font-size: 72px; /* 폰트 크게 */
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-subtext {
+  font-size: 20px;
+  opacity: 0.8;
+  font-weight: 300;
+  padding-bottom: 20px; /* 줄과 간격 */
+}
+
+/* ============================
+   HERO ENTER ANIMATION
+============================ */
+.contact-hero {
+  opacity: 0;
+  animation: heroFadeUp 1.2s ease-out forwards;
+  animation-delay: 0.2s; /* 등장 타이밍 */
+}
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 히어로 밑줄: 가운데에서 양옆으로 뻗는 애니메이션 */
+.hero-underline {
+  width: 0; /* 처음에는 0 */
+  height: 1px;
+  background-color: #fff;
+  margin: 20px auto 0;
+  animation: expandLine 1s ease-out forwards;
+  animation-delay: 0.5s; /* 텍스트 fade-up 끝나고 시작 */
+  opacity: 0;
+  margin-top: -5px;
+}
+
+/* 라인이 커지는 애니메이션 */
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    width: 350px; /* 원하는 길이 조절 가능 */
+    opacity: 1;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 20px;
+
+  label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+
+    margin-top: 0px;
+  }
+
+  select,
+  textarea {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    padding: 16px;
+    border-radius: 12px;
+    color: #fff;
+    margin-top: 12px;
+
+    &:focus {
+      outline: none;
+      border-color: #555;
+    }
+  }
+
+  textarea {
+    height: 160px;
+    resize: none;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 16px 0;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: #e5e5e5;
+    }
+  }
+}
+
+/* Fade Up Animation */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Underline animation */
+@keyframes lineGrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60px;
+  }
+}
+
+.mobile-nav.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ============================
+   FORM FIELD SPACING FIX
+============================ */
+.contact-section .form-group {
+  margin-bottom: 20px; /* 원하는 값으로 조절 */
+}
+
+.contact-section select {
+  margin-top: 0px;
+}
+
+.contact-section textarea {
+  margin-top: 0px;
+}

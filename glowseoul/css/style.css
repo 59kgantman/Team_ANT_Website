@@ -772,7 +772,7 @@ html > body {
 }
 .section-4 .review-slider {
   width: 100%;
-  overflow: hidden;
+  overflow: visible !important;
   position: relative;
 }
 .section-4 .review-track {
