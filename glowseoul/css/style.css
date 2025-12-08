@@ -441,6 +441,9 @@ html > body {
 .mobile-nav.open ul li:nth-child(6) {
   transition-delay: 0.65s;
 }
+.mobile-nav.open ul li:nth-child(7) {
+  transition-delay: 0.75s;
+}
 
 @media (max-width: 768px) {
   .section-1__container {
@@ -656,6 +659,7 @@ html > body {
 }
 .section-3 .card .card__btn {
   width: 100%;
+  display: inline-block;
   padding: 14px 0;
   background: #ff2f6a;
   color: #fff;
@@ -772,11 +776,11 @@ html > body {
 }
 .section-4 .review-slider {
   width: 100%;
-  overflow: visible !important;
+  overflow: visible;
   position: relative;
 }
 .section-4 .review-track {
-  overflow: visible;
+  overflow: visible !important;
   display: flex;
   gap: 40px;
   animation: slide-left 15s linear infinite;
@@ -791,6 +795,9 @@ html > body {
 }
 .section-4 .review-track img:hover {
   transform: scale(1.12); /* 확대 */
+  overflow: visible;
+  z-index: 10;
+  border-radius: 20px;
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.5), 0 0 70px rgba(255, 255, 255, 0.3);
 }
 @media (max-width: 768px) {

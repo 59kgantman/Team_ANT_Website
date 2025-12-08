@@ -519,6 +519,9 @@ $video-aspect-ratio: 2.33333;
   &.open ul li:nth-child(6) {
     transition-delay: 0.65s;
   }
+  &.open ul li:nth-child(7) {
+    transition-delay: 0.75s;
+  }
 }
 
 @media (max-width: 768px) {
@@ -771,6 +774,7 @@ $video-aspect-ratio: 2.33333;
 
     .card__btn {
       width: 100%;
+      display: inline-block;
       padding: 14px 0;
       background: #ff2f6a;
       color: #fff;
@@ -907,12 +911,12 @@ $video-aspect-ratio: 2.33333;
   /* 리뷰 슬라이더 */
   .review-slider {
     width: 100%;
-    overflow: visible !important;
+    overflow: visible;
     position: relative;
   }
 
   .review-track {
-    overflow: visible;
+    overflow: visible !important;
     display: flex;
     gap: 40px;
     animation: slide-left 15s linear infinite;
@@ -926,6 +930,9 @@ $video-aspect-ratio: 2.33333;
 
       &:hover {
         transform: scale(1.12); /* 확대 */
+        overflow: visible;
+        z-index: 10;
+        border-radius: 20px;
         box-shadow: 0 0 40px rgba(255, 255, 255, 0.5),
           0 0 70px rgba(255, 255, 255, 0.3);
       }
