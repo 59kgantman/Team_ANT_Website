@@ -134,7 +134,7 @@
               >
             </h2>
             <p class="lead-desc">
-              온라인 코칭은 설문 → 화상미팅 → 개인화 프로그램 제공 → 지속
+              온라인 코칭은 설문지 작성 → 화상미팅 → 프로그램 제공 및 운동 진행 → 상호
               피드백의 흐름으로 진행됩니다. 
               <p class="lead-desc">텍스트와 영상으로 구성된 단계별
               안내를 확인하세요.</p> 
@@ -144,18 +144,29 @@
           <!-- STEP 1 -->
           <div class="step fade-up">
             <div class="step__media">
-              <!-- 이미지 또는 비디오 중 하나 사용.
-             추천: ./images/online-step1.jpg 또는 ./videos/online-step1.mp4 -->
-              <img src="./images/online-step1.jpg" alt="설문지 작성 이미지" />
+              <video
+                src="./videos/온라인코칭 프로세스 1.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+  controlslist="nodownload noremoteplayback nofullscreen"
+  disablepictureinpicture
+
+              ></video>
             </div>
 
             <div class="step__text">
               <div class="step__meta">STEP 01</div>
               <h3 class="step__title">설문지 작성</h3>
               <p class="step__desc">
-                코칭을 시작하기 전 자세한 설문지 작성과 운동영상 제출을 통해
-                사전 정보를 획득합니다. 설문지는 자세히 작성해주실수록 정확한
-                맞춤 코칭이 가능합니다.
+                코칭을 시작하기 전, 설문지 작성과 운동영상 제출을 통해
+                회원 분의 사전 정보를 획득하며, 어떠한 문제가 있는지, 
+                무엇을 보완하고 싶은지와 같은 사항을 자세히 작성해주실수록 보다 세밀한
+                맞춤이 가능합니다. <br>
+                첨부해주시는 영상은 기본적으로 스쿼트, 
+                벤치프레스, 데드리프트 3종목이 되지만, 희망하는 종목이 있으시다면
+                추가적으로 더 첨부해주실 수 있습니다.
               </p>
             </div>
           </div>
@@ -163,13 +174,14 @@
           <!-- STEP 2 (reverse layout) -->
           <div class="step step--reverse fade-up">
             <div class="step__media">
-              <!-- 예: 화상미팅 스크린샷이나 짧은 muted 비디오 -->
               <video
-                src="./videos/online-step2.mp4"
+                src="./videos/온라인코칭 프로세스 2.mp4"
                 autoplay
                 muted
                 loop
                 playsinline
+                  controlslist="nodownload noremoteplayback nofullscreen"
+  disablepictureinpicture
               ></video>
             </div>
 
@@ -177,9 +189,13 @@
               <div class="step__meta">STEP 02</div>
               <h3 class="step__title">화상미팅 진행</h3>
               <p class="step__desc">
-                1:1 화상미팅(평균 20~30분, 최대 1시간)으로 설문 내용을 기반해
-                세부 정보를 확인하고, 제출하신 3대 운동 영상에 대한 테크니컬
-                피드백을 제공합니다.
+                설문지 내용을 기반으로 1:1 화상미팅(평균 20~30분, 최대 1시간 소요)을
+                진행하며, 제출해주신 3대 운동에 대한 테크니컬
+                피드백 또한 함께 진행합니다.<br>
+                화상 미팅에는 현재 운동 환경 및 운동 진행 시 불편함이 있는 부위와 같은,
+                더 자세한 내용 확인이 필요한 사항 및 의견 교환이 필요하다고 판단되는 
+                부분에 대해 중점적으로 다루게 됩니다.<br>
+                (영상은 테크니컬 피드백 예시)
               </p>
             </div>
           </div>
@@ -187,59 +203,85 @@
           <!-- STEP 3 -->
           <div class="step fade-up">
             <div class="step__media">
-              <img src="./images/online-step3.jpg" alt="프로그램 제공 이미지" />
+              <video
+                src="./videos/온라인코칭 프로세스 2.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                  controlslist="nodownload noremoteplayback nofullscreen"
+  disablepictureinpicture
+              ></video>
             </div>
 
             <div class="step__text">
               <div class="step__meta">STEP 03</div>
               <h3 class="step__title">코칭 진행</h3>
               <p class="step__desc">
-                개인화된 주 단위 프로그램 시트가 제공됩니다. 각 운동을 수행한
-                영상을 앱에 첨부하고, 그 날의 특이사항을 함께 적어 피드백을
-                요청하면 코치가 프로그램과 영상을 보고 맞춤 피드백을 드립니다.
-              </p>
-
-              <ul class="step__list">
-                <li>프로그램은 주 단위로 갱신</li>
-                <li>필요 시 추가 설명 영상 제공</li>
-                <li>운동 영상 업로드 → 코치 피드백</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- FEEDBACK & RESOURCES block -->
-          <div class="support-block fade-up">
-            <div class="support">
-              <h4 class="support-title">피드백 제공</h4>
-              <p class="support-desc">
-                피드백 횟수는 주간 운동 빈도에 따라 달라질 수 있습니다(예시: 주
-                3회 운동 시 주 3회 피드백). 질문 횟수나 조건에 제한이 없습니다.
-                필요 시 추가 화상미팅을 진행할 수 있습니다.
-              </p>
-            </div>
-
-            <div class="support">
-              <h4 class="support-title">참고자료 제공</h4>
-              <p class="support-desc">
-                코칭 진행을 돕기 위한 영상 자료, 스트렝스 훈련 기초 안내, 종목별
-                가이드 등 언제든 복습 가능한 자료를 함께 제공합니다.
+                앞선 내용을 바탕으로, 개인화된 운동 프로그램이 제공됩니다. 
+                프로그램 시트에는 운동 구성, 권장 중량, 성장 곡선, 종목 안내 영상 및 기타 필요한 내용들이 모두 포함되어 있습니다.<br>
+                프로그램을 따라 운동을 진행하며 시트에 운동 내용을 기록하고,
+                운동 영상을 촬영하여 어플에 첨부하고,
+                그 날의 특이사항을 함께 적어주시면
+                프로그램 진행 기록, 운동영상, 후기를 바탕으로 피드백을 드립니다.<br><br>
+                (실제로 드리는 영상 피드백에 대한 예시입니다)
               </p>
             </div>
           </div>
 
-          <!-- JOIN INFO / CTA -->
-          <div class="join-block fade-up">
-            <div class="join-inner">
-              <p class="join-note">
-                *온라인 코칭 최초 가입비 <strong>₩30,000</strong> (설문지 확인 ·
-                화상미팅 · 프로그램 작성 · 티셔츠 제공 포함)
-              </p>
-              <a href="./contact.html" class="btn btn--primary"
-                >온라인 코칭 신청 / 문의하기</a
-              >
-            </div>
-          </div>
-        </div>
+          <!-- STEP 4 (reverse layout) -->
+<div class="step step--reverse fade-up">
+  <div class="step__media">
+    <video
+      src="./videos/온라인코칭 피드백.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      controlslist="nodownload noremoteplayback nofullscreen"
+      disablepictureinpicture
+    ></video>
+  </div>
+
+  <div class="step__text">
+    <div class="step__meta">※ 참고사항</div>
+    <h3 class="step__title">피드백 제공</h3>
+    <p class="step__desc">
+         기본적으로 피드백은 영상의 형태로 제공되며(Step 3 참고), 피드백의 내용이 짧거나
+                이상 사항이 없는 경우 음성 혹은 텍스트 형태로 피드백이 제공될 수 있습니다.<br>
+                또한 정규 피드백에 이어, 종목을 수행하는데 있어 필요하다고 판단되면 추가적인 설명 영상을 제공해드리고 있습니다.<br>
+                피드백의 횟수는 운동 빈도에 따라 달라질 수 있으며(예시: 주
+                3회 운동 시 주 3회 피드백), 질의응답에 대한 제한은 없습니다.
+                또한, 필요하다고 판단될 시에는 추가적인 화상미팅을 진행할 수 있습니다.<br><br>
+                (실제로 제공해드리는 보강 설명 영상 일부분 첨부)
+    </p>
+  </div>
+</div>
+
+<!-- STEP 5 (normal layout) -->
+<div class="step fade-up">
+  <div class="step__media">
+    <video
+      src="./videos/온라인코칭 자료제공.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      controlslist="nodownload noremoteplayback nofullscreen"
+      disablepictureinpicture
+    ></video>
+  </div>
+
+  <div class="step__text">
+    <div class="step__meta">STEP 05</div>
+    <h3 class="step__title">참고자료 제공</h3>
+    <p class="step__desc">
+      코칭 진행을 돕기 위한 영상 자료, 스트렝스 훈련 기초 안내,<br>
+      종목별 가이드 등 언제든 복습 가능한 자료를 함께 제공합니다.
+    </p>
+  </div>
+</div>
+
       </section>
       <!-- ===== END ONLINE COACHING DETAIL CONTENT ===== -->
 

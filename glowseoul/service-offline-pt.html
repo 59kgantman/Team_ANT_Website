@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service | Glow Seoul</title>
+
+    <!-- Tailwind -->
+    <script defer src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/service.css" />
+  </head>
+
+  <body class="bg-black text-white">
+    <div class="site-wrap">
+      <!-- ★ Header (공통) -->
+      <header class="top-bar">
+        <div class="top-bar__inner">
+          <div class="logo-box flex items-center">
+            <a href="index.html" class="logo">
+              <img
+                src="./images/팀앤트 로고 색반전(그림자).png"
+                class="logo-pc"
+              />
+              <img
+                src="./images/팀앤트 로고 색반전(그림자).png"
+                alt="glow seoul logo mobile"
+                class="logo-mobile"
+              />
+            </a>
+          </div>
+
+          <nav class="top-bar__menu-1 ml-auto hidden md:block">
+            <ul class="menu flex">
+              <li class="menu-item">
+                <a href="./about.html" class="menu-item-text">About</a>
+              </li>
+              <li class="menu-item">
+                <a href="./service.html" class="menu-item-text active"
+                  >Service</a
+                >
+              </li>
+              <li class="menu-item">
+                <a href="./price.html" class="menu-item-text">Price</a>
+              </li>
+              <li class="menu-item">
+                <a
+                  href="https://map.naver.com/p/entry/place/1109130661"
+                  target="_blank"
+                  class="menu-item-text"
+                  >Gym</a
+                >
+              </li>
+              <li class="menu-item">
+                <a
+                  href="https://smartstore.naver.com/antpowerlifting"
+                  class="menu-item-text"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Store</a
+                >
+              </li>
+
+              <li class="menu-item">
+                <a href="./faq.html" class="menu-item-text">FAQ</a>
+              </li>
+              <li class="menu-item">
+                <a href="./contact.html" class="menu-item-text">Contact</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-item-text">Kor</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="hamburger md:hidden" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- 모바일 메뉴 -->
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./service.html">Service</a></li>
+          <li><a href="./price.html">Price</a></li>
+          <li>
+            <a
+              href="https://map.naver.com/p/entry/place/1109130661"
+              class="sub-menu-text"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Gym</a
+            >
+          </li>
+          <li class="menu-item">
+            <a
+              href="https://smartstore.naver.com/antpowerlifting"
+              class="menu-item-text"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Store</a
+            >
+          </li>
+
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- =========================== -->
+      <!-- HERO SECTION                -->
+      <!-- =========================== -->
+      <section class="offline-hero-section">
+        <div class="inner">
+          <h1 class="hero-title" data-fade-up>OFFLINE PT</h1>
+          <p class="hero-sub" data-fade-up>
+            오프라인에서 직접 경험하는 퍼스널 트레이닝
+          </p>
+        </div>
+      </section>
+
+      <!-- =========================== -->
+      <!-- MAIN CONTENT                -->
+      <!-- =========================== -->
+      <section class="offline-content-section">
+        <div class="inner">
+          <!-- 설명 섹션 -->
+          <div class="desc-box">
+            <h2 class="section-title" data-fade-up>
+              OFFLINE PERSONAL TRAINING
+            </h2>
+            <p class="section-text" data-fade-up>
+              Glow Seoul의 오프라인 PT는 1:1 맞춤 케어를 중심으로 정확한 자세,
+              근력 발달, 체형 교정에 중점을 둡니다. 회원님의 현재 신체 상태와
+              목표를 기반으로 가장 효율적인 방향으로 설계합니다.
+            </p>
+          </div>
+
+          <!-- 이미지 or 구성 요소 -->
+          <div class="feature-grid">
+            <div class="feature-item" data-fade-up>
+              <h3>1:1 밀착 지도</h3>
+              <p>정확한 자세, 즉각적인 보정, 안전한 운동 진행</p>
+            </div>
+
+            <div class="feature-item" data-fade-up>
+              <h3>체형 분석 기반 프로그램</h3>
+              <p>체형 불균형 및 기능 평가 후 맞춤 설계</p>
+            </div>
+
+            <div class="feature-item" data-fade-up>
+              <h3>식단 및 생활 루틴 코칭</h3>
+              <p>오프라인 PT와 함께 지속 가능한 라이프스타일 관리</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ★ Footer (Price 페이지와 동일) -->
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <img src="./images/팀앤트 로고 색반전.png" class="footer-logo" />
+            <div class="footer-sns">
+              <a
+                href="https://naver.me/GipdUq2N"
+                class="sns-item naver-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="26" height="26" viewBox="0 0 24 24">
+                  <rect width="24" height="24" rx="4" fill="#03C75A"></rect>
+                  <path
+                    d="M14.6 12.9 9.8 6H6v12h3.4v-6.9l4.8 6.9H18V6h-3.4v6.9z"
+                    fill="#fff"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/@59kgAntman"
+                class="sns-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/jj_the_antman_59kg/"
+                class="sns-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-center">
+            <h4 class="footer-title">Contact</h4>
+            <ul>
+              <li>Email: antcorporation2022@gmail.com</li>
+              <li>Phone: 010-2622-8089</li>
+              <li>Instagram: @ant.powerlifting</li>
+            </ul>
+          </div>
+
+          <div class="footer-right">
+            <h4 class="footer-title">Address</h4>
+            <p>
+              경기도 고양시 일산동구<br />
+              일산로 286번길 53-22 1층<br />
+              Mon~Sat 10:30 ~ 22:00
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2022 Team Ant Powerlifting. All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>

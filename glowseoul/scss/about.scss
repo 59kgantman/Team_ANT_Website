@@ -188,6 +188,10 @@
     padding: 0;
     margin-top: 1rem;
 
+    .career-gap {
+      height: 35px; // 원하는 만큼 조정 가능
+    }
+
     li {
       position: relative;
       padding-left: 18px;
@@ -212,6 +216,127 @@
   }
 }
 
-/* ==============================
-   About: Fade-Up Animation
+.about-page {
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+
+    img {
+      width: 42px; // 아이콘 크기 조절 가능
+      height: 42px;
+      object-fit: contain;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.12);
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+.about-sns {
+  display: flex;
+  align-items: center;
+  gap: 18px; // 아이콘 간격 조절
+  margin-top: 25px;
+
+  .sns-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    transition: 0.25s ease;
+    font-size: 20px;
+
+    i {
+      font-size: 22px;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-3px);
+    }
+  }
+
+  /* 네이버 아이콘 크기 통일 */
+  .naver-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* YouTube / Instagram 색감 유지 */
+  .fa-youtube {
+    color: #ff4747;
+  }
+
+  .fa-instagram {
+    font-size: 28px;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* ===============================
+   About: Media Section
 ================================= */
+
+.about-page {
+  .about-media {
+    margin-top: -100px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  .media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .media-card {
+      background: #111;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(255, 255, 255, 0.85);
+      }
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #e0e0e0;
+      }
+    }
+  }
+}
