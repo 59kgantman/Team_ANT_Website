@@ -29,19 +29,13 @@
     letter-spacing: -0.5px;
     margin-bottom: 12px;
   }
-
-  /* fade-up animation */
-  [data-fade-up] {
-    opacity: 0;
-    transform: translateY(12px);
-    animation: fadeUp 0.8s ease forwards;
-  }
 }
 
 /* 모바일 */
 @media (max-width: 768px) {
   .offline-hero-section {
     height: 68vh;
+    margin-bottom: 40px;
 
     .hero-title {
       font-size: 36px;
@@ -73,7 +67,7 @@
   height: 1px;
   background: #fff;
   margin: 20px auto 0;
-  animation: sectionUnderlineGrow 1.4s ease forwards;
+  animation: sectionUnderlineGrow 1.8s ease forwards;
 }
 
 @keyframes sectionUnderlineGrow {
@@ -150,7 +144,7 @@
   .feature-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 38px;
+    gap: 18px;
 
     .feature-item {
       background: rgba(255, 255, 255, 0.02);
@@ -177,126 +171,185 @@
         transform: translateY(-4px);
         box-shadow: 0 14px 26px rgba(0, 0, 0, 0.4);
       }
+    }
+  }
 
-      &[data-fade-up] {
-        opacity: 0;
-        transform: translateY(12px);
-        animation: fadeUp 1s ease forwards;
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .offline-content-section .feature-grid {
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .offline-content-section {
+      .inner {
+        padding: 40px 18px;
       }
-    }
-  }
-}
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .offline-content-section .feature-grid {
-    gap: 24px;
-  }
-}
+      .desc-box .section-title {
+        font-size: 22px;
+      }
 
-@media (max-width: 768px) {
-  .offline-content-section {
-    padding-top: 40px;
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
 
-    .inner {
-      padding: 40px 18px;
-    }
+        .feature-item {
+          padding: 24px 18px;
 
-    .desc-box .section-title {
-      font-size: 22px;
-    }
-
-    .feature-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-
-      .feature-item {
-        padding: 24px 18px;
-
-        h3 {
-          font-size: 18px;
-        }
-        p {
-          font-size: 14px;
+          h3 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+          }
         }
       }
     }
   }
-}
 
-/* ============================
+  /* ============================
    STEP (오프라인 PT · 영상+텍스트)
 =============================== */
 
-.step {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-  margin-bottom: 140px;
+  .step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
 
-  .step-media {
-    flex: 0 0 auto;
-    max-width: 480px;
+    .step__media {
+      flex: 0 0 auto;
 
-    video {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
+      video {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        display: block;
+      }
+    }
+
+    .step-text {
+      color: #fff;
+
+      h2 {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: var(--cream);
+      }
+
+      p {
+        color: #cfcfcf;
+        line-height: 1.7;
+        font-size: 16px;
+        max-width: 520px;
+      }
     }
   }
 
-  .step-text {
-    color: #fff;
-
-    h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: var(--cream);
+  .step__text {
+    .step__meta {
+      margin-bottom: 10px; // STEP 01 과 타이틀 사이
+      font-size: 16px;
+      letter-spacing: 1px;
+      opacity: 0.8;
     }
 
-    p {
-      color: #cfcfcf;
+    .step__title {
+      font-size: 22px;
+      margin-bottom: 16px; // 타이틀과 설명 사이
+    }
+
+    .step__desc {
       line-height: 1.7;
-      font-size: 16px;
+      color: #cfcfcf;
+    }
+  }
+
+  /* Reverse (왼쪽/오른쪽 반전) */
+  .step.step--reverse {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .step.step--reverse {
+    direction: rtl;
+  }
+
+  .step.step--reverse > * {
+    direction: ltr;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .step {
+      grid-template-columns: 1fr;
+      gap: 0px;
+      margin-bottom: 50px;
+      margin-top: 50px;
+
+      .step__media {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .step,
+      .step.step--reverse {
+        grid-template-columns: 1fr !important;
+        direction: ltr !important; // 역방향 제거
+      }
+    }
+
+    /* reverse 시 모바일에서는 아래→위 순서 유지 */
+    .step.step--reverse {
+      direction: ltr !important;
+    }
+  }
+
+  /* PC */
+  @media (min-width: 1024px) {
+    .step__video {
       max-width: 520px;
     }
   }
-}
 
-/* Reverse (왼쪽/오른쪽 반전) */
-.step.step--reverse {
-  grid-template-columns: 1fr 1fr;
-}
-
-.step.step--reverse {
-  direction: rtl;
-}
-
-.step.step--reverse > * {
-  direction: ltr;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .step {
-    grid-template-columns: 1fr;
-    gap: 26px;
-    margin-bottom: 90px;
-
-    .step-media {
-      max-width: 100%;
+  /* ===============================
+   📱 모바일에서 영상 축소 + 정사각형 유지
+================================== */
+  @media (max-width: 768px) {
+    .step__media {
+      width: 100%;
+      max-width: 320px; /* 🔥 영상 전체 크기를 조절하는 핵심 */
+      aspect-ratio: 1 / 1; /* 🔥 강제 정사각형 유지 */
+      overflow: hidden; /* 잘리는 부분 안 보이게 */
+      margin: 0 auto; /* 가운데 정렬 */
+      border-radius: 16px; /* 이미 다른 스텝에서도 쓴 radius 있으면 동일하게 */
     }
 
-    .step-text p {
-      max-width: 100%;
+    .step__media video {
+      max-width: 300px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      object-fit: cover; /* 🔥 비율 깨짐 방지하면서 꽉 채우기 */
+      display: block;
     }
   }
+}
 
-  /* reverse 시 모바일에서는 아래→위 순서 유지 */
-  .step.step--reverse {
-    direction: ltr !important;
-  }
+/* 기본 상태: 아래로 내려가 있고 투명 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* 화면에 보이면 활성화 */
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
 }

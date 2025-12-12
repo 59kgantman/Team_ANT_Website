@@ -11,7 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* fade-up animation */
 }
 .offline-hero-section .inner {
   text-align: center;
@@ -29,16 +28,12 @@
   letter-spacing: -0.5px;
   margin-bottom: 12px;
 }
-.offline-hero-section [data-fade-up] {
-  opacity: 0;
-  transform: translateY(12px);
-  animation: fadeUp 0.8s ease forwards;
-}
 
 /* 모바일 */
 @media (max-width: 768px) {
   .offline-hero-section {
     height: 68vh;
+    margin-bottom: 40px;
   }
   .offline-hero-section .hero-title {
     font-size: 36px;
@@ -67,7 +62,7 @@
   height: 1px;
   background: #fff;
   margin: 20px auto 0;
-  animation: sectionUnderlineGrow 1.4s ease forwards;
+  animation: sectionUnderlineGrow 1.8s ease forwards;
 }
 
 @keyframes sectionUnderlineGrow {
@@ -112,6 +107,16 @@
   margin-top: -250px;
   /* 설명 박스 */
   /* Feature Grid */
+  /* RESPONSIVE */
+  /* ============================
+     STEP (오프라인 PT · 영상+텍스트)
+  =============================== */
+  /* Reverse (왼쪽/오른쪽 반전) */
+  /* MOBILE */
+  /* PC */
+  /* ===============================
+     📱 모바일에서 영상 축소 + 정사각형 유지
+  ================================== */
 }
 .offline-content-section .inner {
   max-width: var(--container);
@@ -137,7 +142,7 @@
 .offline-content-section .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 38px;
+  gap: 18px;
 }
 .offline-content-section .feature-grid .feature-item {
   background: rgba(255, 255, 255, 0.02);
@@ -162,106 +167,147 @@
   transform: translateY(-4px);
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.4);
 }
-.offline-content-section .feature-grid .feature-item[data-fade-up] {
-  opacity: 0;
-  transform: translateY(12px);
-  animation: fadeUp 1s ease forwards;
-}
-
-/* RESPONSIVE */
 @media (max-width: 1024px) {
-  .offline-content-section .feature-grid {
+  .offline-content-section .offline-content-section .feature-grid {
     gap: 24px;
   }
 }
 @media (max-width: 768px) {
-  .offline-content-section {
-    padding-top: 40px;
-  }
-  .offline-content-section .inner {
+  .offline-content-section .offline-content-section .inner {
     padding: 40px 18px;
   }
-  .offline-content-section .desc-box .section-title {
+  .offline-content-section .offline-content-section .desc-box .section-title {
     font-size: 22px;
   }
-  .offline-content-section .feature-grid {
+  .offline-content-section .offline-content-section .feature-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .offline-content-section .feature-grid .feature-item {
+  .offline-content-section .offline-content-section .feature-grid .feature-item {
     padding: 24px 18px;
   }
-  .offline-content-section .feature-grid .feature-item h3 {
+  .offline-content-section .offline-content-section .feature-grid .feature-item h3 {
     font-size: 18px;
   }
-  .offline-content-section .feature-grid .feature-item p {
+  .offline-content-section .offline-content-section .feature-grid .feature-item p {
     font-size: 14px;
   }
 }
-/* ============================
-   STEP (오프라인 PT · 영상+텍스트)
-=============================== */
-.step {
+.offline-content-section .step {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
-  margin-bottom: 140px;
+  margin-bottom: 50px;
 }
-.step .step-media {
+.offline-content-section .step .step__media {
   flex: 0 0 auto;
-  max-width: 480px;
 }
-.step .step-media video {
+.offline-content-section .step .step__media video {
   width: 100%;
   height: auto;
   border-radius: 12px;
   display: block;
 }
-.step .step-text {
+.offline-content-section .step .step-text {
   color: #fff;
 }
-.step .step-text h2 {
+.offline-content-section .step .step-text h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 16px;
   color: var(--cream);
 }
-.step .step-text p {
+.offline-content-section .step .step-text p {
   color: #cfcfcf;
   line-height: 1.7;
   font-size: 16px;
   max-width: 520px;
 }
-
-/* Reverse (왼쪽/오른쪽 반전) */
-.step.step--reverse {
+.offline-content-section .step__text .step__meta {
+  margin-bottom: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+.offline-content-section .step__text .step__title {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+.offline-content-section .step__text .step__desc {
+  line-height: 1.7;
+  color: #cfcfcf;
+}
+.offline-content-section .step.step--reverse {
   grid-template-columns: 1fr 1fr;
 }
-
-.step.step--reverse {
+.offline-content-section .step.step--reverse {
   direction: rtl;
 }
-
-.step.step--reverse > * {
+.offline-content-section .step.step--reverse > * {
   direction: ltr;
 }
-
-/* MOBILE */
 @media (max-width: 768px) {
-  .step {
+  .offline-content-section {
+    /* reverse 시 모바일에서는 아래→위 순서 유지 */
+  }
+  .offline-content-section .step {
     grid-template-columns: 1fr;
-    gap: 26px;
-    margin-bottom: 90px;
+    gap: 0px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
-  .step .step-media {
+  .offline-content-section .step .step__media {
+    width: 100%;
     max-width: 100%;
   }
-  .step .step-text p {
-    max-width: 100%;
-  }
-  /* reverse 시 모바일에서는 아래→위 순서 유지 */
-  .step.step--reverse {
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .offline-content-section .step,
+  .offline-content-section .step.step--reverse {
+    grid-template-columns: 1fr !important;
     direction: ltr !important;
   }
+}
+@media (max-width: 768px) {
+  .offline-content-section .step.step--reverse {
+    direction: ltr !important;
+  }
+}
+@media (min-width: 1024px) {
+  .offline-content-section .step__video {
+    max-width: 520px;
+  }
+}
+@media (max-width: 768px) {
+  .offline-content-section .step__media {
+    width: 100%;
+    max-width: 320px; /* 🔥 영상 전체 크기를 조절하는 핵심 */
+    aspect-ratio: 1/1; /* 🔥 강제 정사각형 유지 */
+    overflow: hidden; /* 잘리는 부분 안 보이게 */
+    margin: 0 auto; /* 가운데 정렬 */
+    border-radius: 16px; /* 이미 다른 스텝에서도 쓴 radius 있으면 동일하게 */
+  }
+  .offline-content-section .step__media video {
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    -o-object-fit: cover;
+       object-fit: cover; /* 🔥 비율 깨짐 방지하면서 꽉 채우기 */
+    display: block;
+  }
+}
+
+/* 기본 상태: 아래로 내려가 있고 투명 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* 화면에 보이면 활성화 */
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
 }
