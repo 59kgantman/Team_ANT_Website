@@ -208,7 +208,7 @@
 
 @media (max-width: 768px) {
   .price-cards {
-    padding: 0 16px;
+    padding: 0 24px;
   }
 }
 
@@ -281,7 +281,7 @@
       position: absolute;
       align-items: center;
       left: 0px;
-      top: 15px;
+      top: 0px;
       font-size: 14px;
       color: #ff1f6b;
     }
@@ -298,6 +298,17 @@
   }
   .group-desc li::before {
     left: 20px; /* 체크 아이콘도 텍스트 쪽으로 이동 */
+  }
+
+  .price-group.offline .group-desc li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .price-group.offline .group-desc li::before {
+    top: 15px;
   }
 }
 
