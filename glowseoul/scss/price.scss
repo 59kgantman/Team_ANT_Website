@@ -197,6 +197,21 @@
   padding-bottom: 20px; /* 줄과 간격 */
 }
 
+/* ===============================
+   📱 PRICE CARD SIDE PADDING FIX
+================================== */
+@media (max-width: 1024px) {
+  .price-cards {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-cards {
+    padding: 0 16px;
+  }
+}
+
 /* ============================
    HERO ENTER ANIMATION
 ============================ */

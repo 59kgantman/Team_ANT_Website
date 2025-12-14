@@ -354,6 +354,7 @@ html > body {
     text-align: left;
     justify-content: left;
     margin: 0 auto;
+    margin-bottom: 12px;
   }
 }
 .section-2 .section-2__right {
@@ -539,6 +540,7 @@ html > body {
   }
   .section-2__left {
     width: 100%;
+    margin-bottom: 10px;
   }
   .section-2__right {
     width: 100%;
