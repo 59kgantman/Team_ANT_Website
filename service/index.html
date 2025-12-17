@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Team ANT</title>
+    <title>Service | Team ANT</title>
 
     <!-- Tailwind -->
     <script defer src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -45,8 +45,8 @@
     <link rel="manifest" href="/images/site.webmanifest" />
 
     <!-- 공통 CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/service.css" />
   </head>
 
   <body class="bg-black text-white">
@@ -57,11 +57,11 @@
           <div class="logo-box flex items-center">
             <a href="index.html" class="logo">
               <img
-                src="./images/팀앤트 로고 색반전(그림자).png"
+                src="/images/팀앤트 로고 색반전(그림자).png"
                 class="logo-pc"
               />
               <img
-                src="./images/팀앤트 로고 색반전(그림자).png"
+                src="/images/팀앤트 로고 색반전(그림자).png"
                 alt="glow seoul logo mobile"
                 class="logo-mobile"
               />
@@ -71,13 +71,13 @@
           <nav class="top-bar__menu-1 ml-auto hidden md:block">
             <ul class="menu flex">
               <li class="menu-item">
-                <a href="./about.html" class="menu-item-text">About</a>
+                <a href="/about/" class="menu-item-text">About</a>
               </li>
               <li class="menu-item">
-                <a href="./service.html" class="menu-item-text">Service</a>
+                <a href="/service/" class="menu-item-text active">Service</a>
               </li>
               <li class="menu-item">
-                <a href="./price.html" class="menu-item-text">Price</a>
+                <a href="/price/" class="menu-item-text">Price</a>
               </li>
               <li class="menu-item">
                 <a
@@ -98,12 +98,10 @@
               </li>
 
               <li class="menu-item">
-                <a href="./faq.html" class="menu-item-text">FAQ</a>
+                <a href="/faq/" class="menu-item-text">FAQ</a>
               </li>
               <li class="menu-item">
-                <a href="./contact.html" class="menu-item-text active"
-                  >Contact</a
-                >
+                <a href="/contact/" class="menu-item-text">Contact</a>
               </li>
             </ul>
           </nav>
@@ -117,13 +115,13 @@
       <!-- 모바일 메뉴 -->
       <nav class="mobile-nav">
         <ul>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./price.html">Price</a></li>
-          <li><a href="./service.html">Service</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/price/">Price</a></li>
           <li>
             <a
               href="https://map.naver.com/p/entry/place/1109130661"
-              class="menu-item-text"
+              class="sub-menu-text"
               target="_blank"
               rel="noopener noreferrer"
               >Gym</a
@@ -139,88 +137,50 @@
             >
           </li>
 
-          <li><a href="./faq.html">FAQ</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- ★ Hero Section : Glow Seoul Style -->
-      <section class="contact-hero">
-        <div class="hero-inner">
-          <h1 class="contact-title">CONTACT</h1>
-          <p class="contact-subtext">문의 안내</p>
+      <!-- ★ Hero Section : Glow Seoul -->
+      <section class="service-hero">
+        <div class="hero-inner fade-up">
+          <h1 class="service-title">SERVICE</h1>
+          <p class="service-subtext">온라인코칭 & 오프라인PT</p>
 
-          <!-- 히어로 언더라인 -->
+          <!-- 언더라인 -->
           <div class="hero-underline"></div>
         </div>
       </section>
 
-      <!-- ★ FAQ + 입력박스 Section -->
-      <section class="contact-section py-20 px-6 max-w-3xl mx-auto">
-        <form id="contactForm">
-          <!-- 작성자 이름 -->
-          <div class="form-group">
-            <label class="text-xl font-semibold">이름</label>
-            <input
-              type="text"
-              name="user_name"
-              class="w-full bg-zinc-900 border border-zinc-700 px-4 py-3 rounded-xl"
-              placeholder="이름을 입력해주세요."
-              required
-            />
-          </div>
+      <!-- 🔵 SERVICE SELECT SECTION -->
+      <section class="service-select-section fade-up">
+        <div class="service-select-inner">
+          <!-- 온라인 코칭 -->
+          <a href="/service/online-coaching/" class="service-card">
+            <div class="card-inner">
+              <h2>온라인코칭</h2>
+              <p>시공간에 제약을 받지 않는</p>
+              <p>언제 어디서나 가능한 원격 관리 시스템</p>
+            </div>
+          </a>
 
-          <!-- 연락처 -->
-          <div class="form-group">
-            <label class="text-xl font-semibold"
-              >연락처 (전화번호 또는 이메일)</label
-            >
-            <input
-              type="text"
-              name="user_contact"
-              class="w-full bg-zinc-900 border border-zinc-700 px-4 py-3 rounded-xl"
-              placeholder="010-1234-5678 또는 example@email.com"
-              required
-            />
-          </div>
-
-          <!-- 문의 분류 -->
-          <label class="text-xl font-semibold">문의 분류</label>
-          <select
-            name="user_category"
-            class="mt-3 mb-8 w-full bg-zinc-900 border border-zinc-700 px-4 py-3 rounded-xl"
-            required
-          >
-            <option>온라인 코칭 문의/신청</option>
-            <option>오프라인 PT 문의/신청</option>
-            <option>체육관 관련 문의</option>
-            <option>기타 문의</option>
-          </select>
-
-          <!-- 텍스트 입력 -->
-          <label class="text-xl font-semibold">문의 내용</label>
-          <textarea
-            name="user_message"
-            class="mt-3 w-full bg-zinc-900 border border-zinc-700 px-4 py-4 rounded-xl h-40 resize-none"
-            placeholder="궁금하신 내용을 자유롭게 입력해주세요."
-            required
-          ></textarea>
-
-          <!-- 제출 버튼 -->
-          <button
-            type="submit"
-            class="mt-8 w-full py-4 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition"
-          >
-            문의 제출하기
-          </button>
-        </form>
+          <!-- 오프라인 PT -->
+          <a href="./service/offline-pt/" class="service-card">
+            <div class="card-inner">
+              <h2>오프라인PT</h2>
+              <p>안전하고 건강하게,</p>
+              <p>3대운동 전문가와 함께하는 움직임 바로세우기</p>
+            </div>
+          </a>
+        </div>
       </section>
 
       <!-- ★ Footer (공통) -->
       <footer class="site-footer">
         <div class="footer-container">
           <div class="footer-left">
-            <img src="./images/팀앤트 로고 색반전.png" class="footer-logo" />
+            <img src="/images/팀앤트 로고 색반전.png" class="footer-logo" />
             <div class="footer-sns">
               <a
                 href="https://naver.me/GipdUq2N"
@@ -273,43 +233,11 @@
         </div>
 
         <div class="footer-bottom">
-          © 2022 Team ANT Powerlifting. All Rights Reserved.
+          © 2022 Team Ant Powerlifting. All Rights Reserved.
         </div>
       </footer>
     </div>
 
-    <!-- EmailJS SDK -->
-    <script src="./script/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-    <!-- EmailJS 초기화 -->
-    <script>
-      emailjs.init("THvoJsFl9GulA0LXH");
-    </script>
-
-    <script>
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          emailjs
-            .sendForm(
-              "service_agnpyl6", // 🔹 본인 Service ID 넣기
-              "template_14dxmfv", // 🔹 본인 Template ID 넣기
-              this
-            )
-            .then(
-              () => {
-                alert("문의가 성공적으로 전송되었습니다!");
-                this.reset();
-              },
-              (error) => {
-                alert("전송 중 오류가 발생했습니다.");
-                console.log(error);
-              }
-            );
-        });
-    </script>
+    <script src="/script/script.js"></script>
   </body>
 </html>
