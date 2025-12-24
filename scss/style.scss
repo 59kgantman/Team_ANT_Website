@@ -799,12 +799,108 @@ $video-aspect-ratio: 2.33333;
   }
 }
 
+/* ============================
+   Coaching Philosophy Section (2/3사이)
+=============================== */
+.section-philosophy {
+  margin-top: -100px;
+  margin-bottom: -50px;
+  background-color: #111; /* 완전 블랙보다 살짝 밝게 */
+  padding: 120px 20px;
+}
+
+.section-philosophy__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #eaeaea;
+}
+
+.section-philosophy__text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  color: #d0d0d0;
+}
+
+.section-philosophy__text .philo-lead {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.section-philosophy__text .philo-strong {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.section-philosophy__btn {
+  margin-top: 50px;
+}
+
+.philo-link {
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 6px;
+  transition: opacity 0.3s;
+}
+
+.philo-link:hover {
+  opacity: 0.7;
+}
+
+.section-philosophy__headline {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 48px;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.section-philosophy__text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  color: #d0d0d0;
+}
+
+.section-philosophy__text .philo-strong {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.philo-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+
+  transition: all 0.3s ease;
+}
+
+.philo-btn:hover {
+  background: #ffffff;
+  color: #111;
+}
+
 /* -----------------------------------
    SECTION 3
 ----------------------------------- */
 
 .section-3 {
   width: 100%;
+  margin-top: -50px;
   padding: 100px 0;
   background-color: #0d0d0d; // 사이트 배경과 자연스럽게
 
